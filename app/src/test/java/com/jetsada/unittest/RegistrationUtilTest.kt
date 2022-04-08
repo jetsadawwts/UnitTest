@@ -2,6 +2,7 @@ package com.jetsada.unittest
 
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
+import com.jetsada.unittest.unit.RegistrationUtil
 
 class RegistrationUtilTest {
 

@@ -1,10 +1,11 @@
-package com.jetsada.unittest
+package com.jetsada.unittest.util
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
-import org.junit.Assert.*
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
+import com.jetsada.unittest.R
+import com.jetsada.unittest.unit.ResourceComparer
 import org.junit.After
 import org.junit.Before
 
