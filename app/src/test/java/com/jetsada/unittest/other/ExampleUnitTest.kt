@@ -1,4 +1,4 @@
-package com.jetsada.unittest
+package com.jetsada.unittest.other
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.jetsada.unittest
+package com.jetsada.unittest.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
