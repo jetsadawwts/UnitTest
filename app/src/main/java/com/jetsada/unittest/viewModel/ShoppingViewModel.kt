@@ -11,10 +11,12 @@ import com.jetsada.unittest.repositories.ShoppingRepository
 import com.jetsada.unittest.unit.Constants
 import com.jetsada.unittest.unit.Event
 import com.jetsada.unittest.unit.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-
-class ShoppingViewModel @ViewModelInject constructor(private val repository: ShoppingRepository): ViewModel() {
+@HiltViewModel
+class ShoppingViewModel @Inject constructor(private val repository: ShoppingRepository): ViewModel() {
     val shoppingItems = repository.observeAllShoppingItems()
     val totalPrice = repository.observeTotalPrice()
 
