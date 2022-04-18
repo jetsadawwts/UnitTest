@@ -1,6 +1,5 @@
 package com.jetsada.unittest.viewModel
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,7 +28,7 @@ class ShoppingViewModel @Inject constructor(private val repository: ShoppingRepo
     private val _insertShoppingItemStatus = MutableLiveData<Event<Resource<ShoppingItem>>>()
     val insertShoppingItemStatus: LiveData<Event<Resource<ShoppingItem>>> = _insertShoppingItemStatus
 
-    fun setCurImageUrl(url: String){
+    fun setCurImageUrl(url: String) {
         _curImageUrl.postValue(url)
     }
 

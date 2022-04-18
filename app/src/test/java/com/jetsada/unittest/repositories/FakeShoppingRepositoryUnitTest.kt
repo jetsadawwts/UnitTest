@@ -6,6 +6,8 @@ import com.jetsada.unittest.data.local.ShoppingItem
 import com.jetsada.unittest.data.remote.responses.ImageResponse
 import com.jetsada.unittest.unit.Resource
 
+//Create Reposivity On ViewModel Test
+
 class FakeShoppingRepositoryUnitTest: ShoppingRepository {
     private val shoppingItems = mutableListOf<ShoppingItem>()
 

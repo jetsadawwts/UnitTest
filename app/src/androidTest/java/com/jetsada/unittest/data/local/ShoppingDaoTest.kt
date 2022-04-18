@@ -22,6 +22,7 @@ import org.junit.runner.RunWith
 import javax.inject.Inject
 import javax.inject.Named
 
+//Test Hilt Dagger And Room Database
 @ExperimentalCoroutinesApi
 //@RunWith(AndroidJUnit4::class)
 @SmallTest
@@ -52,13 +53,6 @@ class ShoppingDaoTest {
     @After
     fun teardown() {
         database.close()
-    }
-
-    @Test
-    fun testLaunchFragmentInHiltContainer() {
-        launchFragmentInHiltContainer<ShoppingFragment> {
-
-        }
     }
 
     @Test
@@ -94,6 +88,14 @@ class ShoppingDaoTest {
         val totalPriceSum = dao.observeTotalShoppingItems().getOrAwaitValue()
 
         assertThat(totalPriceSum).isEqualTo(2 * 10f + 4 * 5.5f)
+    }
+
+    //Test Fragment
+    @Test
+    fun testLaunchFragmentInHiltContainer() {
+        launchFragmentInHiltContainer<ShoppingFragment> {
+
+        }
     }
 
 }
