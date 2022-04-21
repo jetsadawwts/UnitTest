@@ -2,6 +2,9 @@ package com.jetsada.unittest.di
 
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.jetsada.unittest.R
 import com.jetsada.unittest.data.local.ShoppingDao
 import com.jetsada.unittest.data.local.ShoppingItemDatabase
 import com.jetsada.unittest.data.remote.PixabayAPI
@@ -47,6 +50,15 @@ object AppModule {
     fun provideDefaultShoppingRepository(dao: ShoppingDao, api: PixabayAPI)
         = DefaultShoppingRepository(dao, api) as ShoppingRepository
 
+    @Singleton
+    @Provides
+    fun provideGlideInstance(
+        @ApplicationContext context: Context
+    ) = Glide.with(context).setDefaultRequestOptions(
+        RequestOptions()
+            .placeholder(R.drawable.ic_image)
+            .error(R.drawable.ic_image)
+    )
 
 
 }
