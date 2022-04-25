@@ -1,4 +1,4 @@
-package com.jetsada.unittest
+package com.jetsada.unittest.util
 
 import android.app.Application
 import android.content.Context

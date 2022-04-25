@@ -10,4 +10,7 @@ object Constants {
 
     const val GRID_SPAN_COUNT = 4
 
+    const val SEARCH_TIME_DELAY = 300L
+
+
 }
